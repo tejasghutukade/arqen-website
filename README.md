@@ -39,7 +39,7 @@ For questions about this temporary website or the Arqen platform:
 ## Launch Timeline
 
 - **Current**: Temporary website live
-- **Q2 2024**: Full platform launch
+- **Q2 2025**: Full platform launch
 - **Status**: Development in progress
 
 ---
