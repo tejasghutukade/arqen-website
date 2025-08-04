@@ -6,8 +6,7 @@
     </linearGradient>
   </defs>
   
-  <!-- Background -->
-  <rect width="48" height="48" fill="#1e3a8a"/>
+
   
   <!-- Nodes -->
   <circle cx="12" cy="12" r="4" fill="url(#nodeGradient)"/>
