@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARQEN - Modern Lending Software for the Entire Loan Lifecycle</title>
+    <meta name="description" content="ARQEN is a modern, end-to-end lending platform for banks, credit unions, and private lenders. Streamline origination, underwriting, servicing, and renewals in one unified system.">
+    <meta name="keywords" content="lending software, loan origination, underwriting, loan servicing, renewals, banks, credit unions, private lenders, commercial lending">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ARQEN - Modern Lending Software for the Entire Loan Lifecycle">
+    <meta property="og:description" content="Streamline the entire loan lifecycle from origination to renewals. Built for banks, credit unions, and private lenders.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.arqen.io">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+                        tailwind.config = {
+                    theme: {
+                        extend: {
+                            fontFamily: {
+                                'sans': ['Inter', 'sans-serif'],
+                            },
+                            colors: {
+                                primary: {
+                                    50: '#eff6ff',
+                                    100: '#dbeafe',
+                                    500: '#3b82f6',
+                                    600: '#2563eb',
+                                    700: '#1d4ed8',
+                                    900: '#1e3a8a',
+                                }
+                            }
+                        }
+                    }
+                }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-white page-loading">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                                                        <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-primary-600">ARQEN</h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#features" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
+                        <a href="#benefits" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Benefits</a>
+                        <a href="#about" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#contact" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-primary-600">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-float">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                    Modern Lending Software for the
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
+                        Entire Loan Lifecycle
+                    </span>
+                </h1>
+            </div>
+            <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Origination. Underwriting. Servicing. Renewals. One unified platform built for banks, credit unions, and lenders.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-8 py-4 text-white font-semibold text-lg animate-pulse-slow">
+                    🚀 Launching Soon
+                </div>
+                <a href="#contact" class="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg btn-primary">
+                    Request Demo
+                </a>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 text-white/20 text-6xl animate-float" style="animation-delay: 0s;">🏦</div>
+        <div class="absolute top-40 right-20 text-white/20 text-4xl animate-float" style="animation-delay: 1s;">📊</div>
+        <div class="absolute bottom-40 left-20 text-white/20 text-5xl animate-float" style="animation-delay: 2s;">🤖</div>
+        <div class="absolute bottom-20 right-10 text-white/20 text-4xl animate-float" style="animation-delay: 3s;">📈</div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Lending is Broken — We're Fixing It
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Banks and lenders still rely on spreadsheets, PDFs, and disconnected systems to manage billions in loans.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-red-600 text-2xl">⏰</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Delays in Origination</h3>
+                    <p class="text-gray-600">Slow approval processes and manual workflows</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-orange-600 text-2xl">📋</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Inconsistent Underwriting</h3>
+                    <p class="text-gray-600">Manual processes with varying documentation</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-yellow-600 text-2xl">⚠️</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Regulatory Risks</h3>
+                    <p class="text-gray-600">Missed servicing actions and compliance gaps</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-purple-600 text-2xl">😤</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Frustrated Teams</h3>
+                    <p class="text-gray-600">Overwhelmed staff and poor borrower experiences</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Overview Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Meet ARQEN — Lending Made Smarter
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    ARQEN streamlines the entire loan lifecycle through a secure, intelligent platform that's built for how lenders actually work.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-3xl p-8 shadow-lg mb-16">
+                <div class="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-8">
+                    <div class="flex-1 text-center lg:text-left">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Complete Loan Lifecycle</h3>
+                        <p class="text-lg text-gray-600 mb-6">
+                            No more patchwork tools. No more compliance guessing. Just seamless execution from start to finish.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center p-4 bg-blue-50 rounded-lg">
+                                <div class="text-2xl font-bold text-blue-600">Origination</div>
+                                <div class="text-sm text-gray-600">Smart intake & docs</div>
+                            </div>
+                            <div class="text-center p-4 bg-green-50 rounded-lg">
+                                <div class="text-2xl font-bold text-green-600">Underwriting</div>
+                                <div class="text-sm text-gray-600">Automated validation</div>
+                            </div>
+                            <div class="text-center p-4 bg-purple-50 rounded-lg">
+                                <div class="text-2xl font-bold text-purple-600">Servicing</div>
+                                <div class="text-sm text-gray-600">Task & covenant mgmt</div>
+                            </div>
+                            <div class="text-center p-4 bg-orange-50 rounded-lg">
+                                <div class="text-2xl font-bold text-orange-600">Renewals</div>
+                                <div class="text-sm text-gray-600">Auto-process & reminders</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-8 text-white text-center">
+                            <h4 class="text-xl font-bold mb-4">Built for Lenders</h4>
+                            <p class="text-white/90 mb-6">Compliant by design, not patched in later</p>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-center space-x-2">
+                                    <span>✅</span>
+                                    <span>CMHC Ready</span>
+                                </div>
+                                <div class="flex items-center justify-center space-x-2">
+                                    <span>✅</span>
+                                    <span>B20 Compliant</span>
+                                </div>
+                                <div class="flex items-center justify-center space-x-2">
+                                    <span>✅</span>
+                                    <span>AML Integrated</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    What You Can Do with ARQEN
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    From borrower intake to renewal automation, ARQEN streamlines every step of the lending process with intelligent workflows and built-in compliance.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Smart Origination -->
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-2xl">📝</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Smart Origination</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        AI-powered borrower intake and document capture with intelligent workflows and automated compliance checks.
+                    </p>
+                </div>
+
+                <!-- Automated Underwriting -->
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-2xl">📊</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Automated Underwriting</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        AI-driven credit memo builder and validation engine with smart checklists and automated risk assessment.
+                    </p>
+                </div>
+
+                <!-- Servicing Tracker -->
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-2xl">🛠</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Servicing Tracker</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Manage covenants, tasks, and key dates with automated monitoring and proactive alerts.
+                    </p>
+                </div>
+
+                <!-- Renewal Automation -->
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-2xl">🔁</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Renewal Automation</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Pre-fill renewals, auto-remind borrowers, and streamline the entire renewal process.
+                    </p>
+                </div>
+
+                <!-- Built-in Compliance -->
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-2xl">🔐</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Built-in Compliance</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        CMHC, B20, AML — built into workflows with AI-powered validation. Stay compliant automatically.
+                    </p>
+                </div>
+
+                <!-- API Integrations -->
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-2xl">🔌</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">API Integrations</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Syncs with core banking, CRMs, and third-party tools. No more data silos or manual transfers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Built by Lenders, for Lenders
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We've lived this problem. Our team has managed over $10B in commercial loans with lots of experience building systems.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-1 gap-12 items-center">
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+                                <span class="text-primary-600 text-xl">🇨🇦</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Canadian-Based Team</h3>
+                                <p class="text-gray-600">Built by lenders who understand Canadian regulations and market dynamics.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-green-600 text-xl">🔐</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Secure & Scalable</h3>
+                                <p class="text-gray-600">Enterprise-grade security with cloud-native architecture that grows with your business.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                                <span class="text-purple-600 text-xl">🏦</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Banking Compliant</h3>
+                                <p class="text-gray-600">Built for financial institutions with regulatory compliance baked into every workflow.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                                <span class="text-orange-600 text-xl">🚀</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Future-Ready</h3>
+                                <p class="text-gray-600">Modern architecture designed to adapt to evolving lending requirements and technologies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    About ARQEN
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We're building the future of lending software, combining deep domain expertise with modern technology to solve real problems.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-1 gap-12 items-center">
+                <div class="max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Mission</h3>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        To revolutionize how banks, credit unions, and private lenders manage their loan portfolios by providing intelligent, compliant solutions that enhance efficiency and deliver better borrower experiences.
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Built for Financial Institutions</h3>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Unlike generic software solutions, ARQEN is specifically designed for financial institutions, understanding their unique challenges, regulatory requirements, and operational needs.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                            <div class="text-3xl font-bold text-primary-600 mb-2">AI-Powered</div>
+                            <div class="text-sm text-gray-600">Secure & Intelligent</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                            <div class="text-3xl font-bold text-green-600 mb-2">Secure</div>
+                            <div class="text-sm text-gray-600">Enterprise Grade</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Ready to Transform Lending at Your Institution?
+                </h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Let's streamline your loan operations — starting today.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-8 py-4 text-white font-semibold text-lg">
+                    🚀 Launching Q4 2025
+                </div>
+                <a href="#contact" class="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg btn-primary">
+                    Request Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Get in Touch
+            </h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+                Interested in learning more about ARQEN? Contact us to schedule a demo or join our pilot program.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📧</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+                    <p class="text-gray-600">hello@arqen.io</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📋</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Pilot Program</h3>
+                    <p class="text-gray-600">Join our early access program</p>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-primary-500 to-primary-700 rounded-2xl p-8 text-white">
+                <h3 class="text-2xl font-bold mb-4">Stay Updated</h3>
+                <p class="text-white/90 mb-6">Get notified when ARQEN launches and receive exclusive early access offers.</p>
+                <form id="subscribeForm" action="https://docs.google.com/forms/d/1xvZIv8euy67d05NYKWTMxnIJM2FND3xqOb1zYj_VbtE/formResponse" method="POST" target="hidden_iframe" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" name="entry.2114335226" placeholder="Enter your email" required class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                    <button type="submit" id="subscribeBtn" class="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Subscribe
+                    </button>
+                </form>
+                <iframe name="hidden_iframe" style="display:none;"></iframe>
+                <p class="text-white/70 text-sm mt-2">We'll notify you when ARQEN launches!</p>
+                <div id="successMessage" class="hidden mt-4 p-4 bg-green-500/20 border border-green-400/30 rounded-lg">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-green-400">✅</span>
+                        <span class="text-white font-medium">Thanks! You're subscribed to ARQEN updates.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">ARQEN</h3>
+                    <p class="text-gray-400">
+                        Modern lending software for the entire loan lifecycle.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#benefits" class="hover:text-white transition-colors">Benefits</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 ARQEN. All rights reserved. Launching soon.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scrolling -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Handle subscribe form submission
+        const subscribeForm = document.getElementById('subscribeForm');
+        const subscribeBtn = document.getElementById('subscribeBtn');
+        const successMessage = document.getElementById('successMessage');
+
+        subscribeForm.addEventListener('submit', function(e) {
+            // Show loading state
+            subscribeBtn.innerHTML = 'Subscribing...';
+            subscribeBtn.disabled = true;
+            subscribeBtn.classList.add('opacity-50');
+
+            // Show success message after a short delay
+            setTimeout(() => {
+                successMessage.classList.remove('hidden');
+                successMessage.classList.add('animate-fade-in');
+                
+                // Reset form
+                subscribeForm.reset();
+                
+                // Reset button
+                subscribeBtn.innerHTML = 'Subscribe';
+                subscribeBtn.disabled = false;
+                subscribeBtn.classList.remove('opacity-50');
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 5000);
+            }, 1000);
+        });
+    </script>
+</body>
+</html> 
